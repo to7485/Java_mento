@@ -123,3 +123,106 @@ Eclipse IDE for Enterprise Java and Web Developers 버전을 운영체제에 맞
 (압축을 해제할때는 반디집이 제일 좋다)
 
 ![image](https://github.com/to7485/Java_mento/assets/54658614/18d8b7c9-d4a3-4468-bbbc-842e1bf18b47)
+
+## 이클립스 실행해보기
+이클립스를 켜고 Browse를 눌러 우리가 만들어 놓은 work 폴더로 경로를 잡아주자.(앞으로 우리가 작업하는 프로젝트들은 work폴더에 저장될 것이다.)
+
+![image](https://user-images.githubusercontent.com/54658614/211976280-0159d649-c5d5-47c3-840a-09f4e37d4e24.png)
+
+<hr>
+
+## 이클립스 프로그램 구성
+
+![image](https://user-images.githubusercontent.com/54658614/212237771-1da23aee-2b7b-4d49-9692-e1b87980a835.png)
+
+## 자바 프로젝트의 구성
+자바는 패키지라고 하는 폴더 단위로 프로젝트를 관리한다.<br>
+내가 손흥민이 최근에 넣었던 골에 대한 영상을 찾고 싶은데 하나의 폴더에 축구 동영상 50개와 야구 동영상 50개가 있다면 1/100 확률로 찾을 수 있다.
+하지만 최소한 축구 동영상 폴더와 야구 동영상 폴더를 나눠서 관리를 하게 되면 1/50 확률로 찾을 수 있는 속도가 2배 증가한다.
+
+## 자바 프로젝트 생성하기
+![image](https://user-images.githubusercontent.com/54658614/212238723-e89acb35-1605-4a1b-8e9f-716fd097cc81.png)
+
+![image](https://user-images.githubusercontent.com/54658614/212238789-2ef70972-6e66-432e-9380-159f46f01526.png)
+
+![image](https://user-images.githubusercontent.com/54658614/212238858-e61b8d78-c9a4-45ee-9480-ad523f1589ad.png)
+
+![image](https://user-images.githubusercontent.com/54658614/212238952-7869b3bd-a2ea-4eeb-a94a-5081bedc8ecc.png)
+
+## 폴더에 해당하는 패키지 생성하기
+
+![image](https://user-images.githubusercontent.com/54658614/212239071-7dea18ab-2129-470a-b383-ae8a81c6a9d6.png)
+
+### 패키지 이름을 적고 finish를 누릅니다.
+
+![image](https://user-images.githubusercontent.com/54658614/212239347-bc640c8d-266a-4e4a-b1cf-6ca13aad557b.png)
+
+### 그러면 비어있는 패키지가 생성되게 됩니다.
+
+![image](https://user-images.githubusercontent.com/54658614/212239455-3f18af92-83b4-4f2f-8c43-276e56506204.png)
+
+## 코드를 작성하는 공간인 클래스 생성하기
+
+![image](https://user-images.githubusercontent.com/54658614/212239571-0380fc1a-b15c-4f17-aacd-036e5e6d9b05.png)
+
+### 클래스를 작성할 때 클래스의 이름의 첫번째 글자는 반드시 대문자로 작성해야 합니다.
+
+![image](https://user-images.githubusercontent.com/54658614/212239611-d741c393-40b5-430b-8b43-3b8e62956724.png)
+
+![image](https://user-images.githubusercontent.com/54658614/212239789-91e1818d-fb55-4fba-83b5-c727a4cbae4c.png)
+
+### 클래스를 작성하면 항상 main이라고 하는걸 작성해주자 지금 당장은 뭔지 모르겠지만 자바가 실행될 때 main 영역 안에 있는 코드가 실행된다.
+
+```java
+public class Test {
+	public static void main(String[] args) {
+		
+	}
+}
+```
+### System.out.println("hello world"); 작성해보기
+main의 영역 안에 System.out.println("hello world")를 적고 ctrl + f11를 눌러 실행을 해보도록 하겠습니다.<br>
+실행을 하기 전에는 ctrl + s를 눌러 꼭 저장을 해주도록 합시다!
+```java
+public class Test {
+	public static void main(String[] args) {
+		System.out.println("hello world");
+	}
+}
+```
+저장을 하고 실행을 하면 콘솔이라는 공간에 System.out.println() 소괄호 사이에 적은 문장이 출력되어 나오는 모습을 볼 수 있습니다.
+![image](https://user-images.githubusercontent.com/54658614/212241733-b89dbf5a-ae42-4ebd-b28c-53d89afbc2af.png)
+
+## 프로그램의 기본 구조
+## JVM
+### JVM이란?
+자바 가상 머신(Java Virtual Machine)은 자바 프로그램 실행환경을 만들어주는 소프트웨어입니다. 자바 코드를 컴파일 하여 바이트 코드로 만들면 이 코드가 자바 가상 머신 환경에서 실행됩니다. JVM은 자바 실행 환경 JRE(Java Runtime Environment)에 포함되어 있습니다. 현재 사용하는 컴퓨터의 운영체제에 맞는 자바 실행환경(JRE)가 설치되어 있다면 자바 가상 머신이 설치되어 있다는 뜻입니다.
+
+## 컴파일(Compile)
+프로그래머가 작성한 .java 코드(자바코드)를 .class 코드(바이트 코드)로 바꾸는 일련의 과정
+
+    자바 소스코드               자바 바이트 코드<br>
+자바     ->       자바 컴파일러       ->     자바가상머신(JVM) -> Windows에서 실행<br>
+                                                               ㄴ Linux에서 실행<br>
+                                                               ㄴ MacOS에서 실행<br>
+
+## 주석
+프로그램의 소스코드에 프로그래머의 의견이나 설명을 적을 수 있는데 이런 것을 주석(Comment)라고 합니다.<br> 주석은 프로그램 소스에 삽입하더라도 프로그램의 수행에 전혀 영향을 끼치지 않습니다. 컴퓨터(JVM)에서 컴파일을 할 시 인식하지 못하는 코드이기 때문입니다.
+
+```java
+public class Test {
+	public static void main(String[] args) {
+	    //한줄 주석 : //
+	    /*
+	    여
+	    러
+	    줄
+	    주
+	    석
+	    */
+	    //주석을 사용하는 이유 : 코드에 설명을 달아주기 위해
+	    //sysout 적고 ctrl + spacebar 자동완성
+		System.out.println("hello world");
+	}
+}
+```
